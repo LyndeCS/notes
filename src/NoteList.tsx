@@ -66,6 +66,11 @@ export function NoteList({
         </Col>
         <Col xs="auto">
           <Stack gap={2} direction="horizontal">
+            <Button
+              onClick={() => {
+                console.log("Dark Mode button pressed.");
+              }}
+            />
             <Link to="/new">
               <Button variant="primary">Create</Button>
             </Link>
