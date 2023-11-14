@@ -70,7 +70,9 @@ export function NoteList({
               onClick={() => {
                 console.log("Dark Mode button pressed.");
               }}
-            />
+            >
+              Dark Mode
+            </Button>
             <Link to="/new">
               <Button variant="primary">Create</Button>
             </Link>
@@ -103,7 +105,11 @@ export function NoteList({
                   return { label: tag.label, value: tag.id };
                 })}
                 options={availableTags.map((tag) => {
-                  return { label: tag.label, value: tag.id };
+                  return {
+                    label: tag.label,
+                    value: tag.id,
+                    "data-bs-theme": "dark",
+                  };
                 })}
                 onChange={(tags) => {
                   if (tags) {
